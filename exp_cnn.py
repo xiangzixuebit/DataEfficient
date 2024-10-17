@@ -72,7 +72,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description="Trains and tests a 2D problem")
     
-    # parser.add_argument('--inpath', default='/home/ubuntu/data/sisterxiang/Pretraining/datagenerate/RBF-master/RBF-master/conda.recipe/Heat_Types10_source4_number1000_Normalizedn64.npz', help="Path to input training data")
+    
     parser.add_argument('--inpath',
                         default='./Heat_Types10_source4_number1000_Normalizedn64.npz',
                         help="Path to input training data")
