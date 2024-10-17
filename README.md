@@ -17,8 +17,8 @@ python exp_cnn1dvae.py
 ```
 ```
 UNet
-python exp_cnn.py 
-python exp_cnn2s.py 
+Pretraining：python exp_cnn.py 
+Fineturning：python exp_cnn2s.py 
 ```
 
 
