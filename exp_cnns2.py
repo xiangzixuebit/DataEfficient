@@ -41,12 +41,12 @@ class Experiment:
     def train_test(self, out_path):
         Encoder = UNetV2_Encoder(in_channels=1, num_classes=1).to(self.device)
         Encoder.load_state_dict(torch.load(self.load_pathF1))
-        # Encoder.load_state_dict(torch.load(self.load_pathEs2))
+        
         model = MLPModel().to(self.device)
-        # model.load_state_dict(torch.load(self.load_path))
+       
         Decoder = UNetV2_Decoder(in_channels=1, num_classes=1).to(self.device)
-        # Decoder.load_state_dict(torch.load(self.load_pathD1))
-        # Decoder.load_state_dict(torch.load(self.load_pathDs2))
+        Decoder.load_state_dict(torch.load(self.load_pathD1))
+        
         summary_writer = SummaryWriter(out_path)
 
         train_size = 1000
