@@ -36,7 +36,6 @@ class Experiment:
 
     def train_test(self, out_path):
         model = UNetV2(in_channels=1, num_classes=1).to(self.device)
-        model.load_state_dict(torch.load('./modelD1.pth'))
         summary_writer = SummaryWriter(out_path)
         train_size = 10
         test_size = 100
